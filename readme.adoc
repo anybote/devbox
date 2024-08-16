@@ -1,0 +1,8 @@
+:showtitle:
+:toc: left
+:icons: font
+
+= devbox
+
+A https://www.vagrantup.com[vagrant] base box for development built on https://app.vagrantup.com/bento/boxes/ubuntu-22.04[bento/ubuntu-22.04].
+
