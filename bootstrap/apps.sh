@@ -2,12 +2,26 @@
 
 # install basic tools
 
-# dotfiles
+cd /tmp/
 
 # fish shell
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt update
+sudo apt install fish -y
+sudo chsh -s /usr/bin/fish vagrant
+
+# dotfiles
+git clone https://github.com/anybote/dotfiles.git
+./dotfiles/bootstrap.fish -f
+rm -rf dotfiles
 
 # neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+sudo ln -s /opt/nvim-linux64/bin/nvim /usr/bin/nvim
+rm nvim-linux64.tar.gz
 
 # neofetch
-
+sudo apt install neofetch -y
 

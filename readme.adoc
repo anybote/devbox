@@ -6,3 +6,20 @@
 
 A https://www.vagrantup.com[vagrant] base box for development built on https://app.vagrantup.com/bento/boxes/ubuntu-22.04[bento/ubuntu-22.04].
 
+== Usage
+
+On the command line
+[,shell]
+----
+vagrant init anybote/devbox
+vagrant up
+----
+
+In a Vagrantfile
+[,ruby]
+----
+Vagrant.configure("2") do |config|
+  config.vm.box = "anybote/devbox"
+end
+----
+
