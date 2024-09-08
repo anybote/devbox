@@ -23,3 +23,11 @@ Vagrant.configure("2") do |config|
 end
 ----
 
+== Code Server
+
+The devbox ships with https://github.com/coder/code-server[code-server] which is configured without auth. To connect, configure port forwarding for port 8080 in your Vagrantfile.
+[,ruby]
+---
+config.vm.network "forwarded_port", guest: 8080, host: 8080, host_ip: "<your ip>"
+---
+

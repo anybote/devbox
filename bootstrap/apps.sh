@@ -25,3 +25,12 @@ rm nvim-linux64.tar.gz
 # neofetch
 sudo apt install neofetch -y
 
+# code-server
+curl -fsSL https://code-server.dev/install.sh | sh
+sudo systemctl enable --now code-server@vagrant
+mkdir -p ~/.config/code-server && cat << EOF > ~/.config/code-server/config.yaml
+bind-addr: 0.0.0.0:8080
+auth: none
+cert: false
+EOF
+sudo systemctl restart code-server@vagrant
