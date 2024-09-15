@@ -22,8 +22,10 @@ sudo tar -C /opt -xzf nvim-linux64.tar.gz
 sudo ln -s /opt/nvim-linux64/bin/nvim /usr/bin/nvim
 rm nvim-linux64.tar.gz
 
-# neofetch
-sudo apt install neofetch -y
+# fastfetch
+wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.24.0/fastfetch-linux-amd64.deb
+sudo apt install ./fastfetch-linux-amd64.deb
+rm fastfetch-linux-amd64.deb
 
 # code-server
 curl -fsSL https://code-server.dev/install.sh | sh
@@ -34,3 +36,4 @@ auth: none
 cert: false
 EOF
 sudo systemctl restart code-server@vagrant
+
